@@ -1,0 +1,446 @@
+/* ---------- Global styles ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #212529;
+}
+
+button,
+input,
+select,
+textarea {
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(31, 45, 61, 0.08);
+  animation: fadeUp 0.6s ease;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  min-height: 65px;
+  background: linear-gradient(135deg, #0d6efd, #4f46e5) !important;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.25);
+}
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.navbar .btn {
+  border: none;
+  border-radius: 20px;
+  padding: 7px 18px;
+  font-weight: 600;
+}
+
+/* ---------- Main layout ---------- */
+
+.app-layout {
+  display: flex;
+  min-height: calc(100vh - 65px);
+}
+
+.sidebar {
+  width: 240px;
+  min-height: calc(100vh - 65px);
+  padding: 25px 15px !important;
+  background: linear-gradient(180deg, #111827, #1e293b) !important;
+  box-shadow: 4px 0 18px rgba(15, 23, 42, 0.08);
+}
+
+.sidebar h5 {
+  padding-left: 12px;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.sidebar-link {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 13px 15px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #60a5fa;
+  transform: scaleY(0);
+  transition: transform 0.25s ease;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.35),
+    rgba(59, 130, 246, 0.08)
+  );
+  transform: translateX(4px);
+}
+
+.sidebar-link:hover::before,
+.sidebar-link.active::before {
+  transform: scaleY(1);
+}
+
+/* ---------- Main content ---------- */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px;
+  animation: fadeIn 0.5s ease;
+}
+
+.main-content h2 {
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* ---------- Dashboard cards ---------- */
+
+.dashboard-card {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  min-height: 135px;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(31, 45, 61, 0.12);
+  animation: fadeUp 0.6s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  right: -30px;
+  bottom: -35px;
+  border: 18px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 28px rgba(31, 45, 61, 0.2);
+}
+
+.dashboard-card h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.dashboard-card h2 {
+  color: inherit;
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* ---------- Forms ---------- */
+
+.form-control,
+.form-select {
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  padding: 11px 13px;
+  background-color: #fbfdff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+  background-color: white;
+}
+
+.form-label {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px 18px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd, #4f46e5);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4f46e5, #0d6efd);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+/* ---------- Tables ---------- */
+
+.table {
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 14px;
+  color: #475569;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* ---------- Progress bar ---------- */
+
+.progress {
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #e2e8f0;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #0d6efd, #4f46e5);
+  font-weight: 600;
+  transition: width 1s ease-in-out;
+}
+
+/* ---------- Badges ---------- */
+
+.badge {
+  padding: 8px 11px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ---------- Login and signup pages ---------- */
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 25px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #4f46e5);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+.auth-page::before,
+.auth-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  animation: floatingCircle 12s ease-in-out infinite;
+}
+
+.auth-page::before {
+  width: 380px;
+  height: 380px;
+  top: -120px;
+  left: -100px;
+}
+
+.auth-page::after {
+  width: 300px;
+  height: 300px;
+  right: -90px;
+  bottom: -100px;
+  animation-delay: 3s;
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  animation: authAppear 0.8s ease;
+}
+
+.auth-card h2 {
+  color: #1e293b;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.auth-card p {
+  font-size: 14px;
+}
+
+.auth-card a {
+  color: #4f46e5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+.auth-card .btn {
+  margin-top: 8px;
+  padding: 12px;
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes authAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatingCircle {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(30px, -25px) rotate(180deg);
+  }
+}
+
+/* ---------- Mobile view ---------- */
+
+@media (max-width: 768px) {
+  .app-layout {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 15px !important;
+  }
+
+  .sidebar-link {
+    display: inline-block;
+    margin: 4px;
+    padding: 10px 12px;
+  }
+
+  .main-content {
+    padding: 20px 15px;
+  }
+
+  .auth-card {
+    padding: 28px 22px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 30px;
+  }
+}
+
+/* ---------- Reduced motion accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -13,10 +13,37 @@ public class RoomServiceImpl implements RoomService {
     private final RoomRepository roomRepository;
 
     public RoomServiceImpl(RoomRepository roomRepository){
+
         this.roomRepository=roomRepository;
+    }
+    private void validateRoom(Room room) {
+
+        if (room.getRoomNumber() == null ||
+                room.getRoomNumber().isBlank()) {
+            throw new RuntimeException("Room number is required");
+        }
+
+        if (room.getTotalBeds() <= 0) {
+            throw new RuntimeException("Total beds must be greater than zero");
+        }
+
+        if (room.getAvailableBeds() < 0) {
+            throw new RuntimeException("Available beds cannot be negative");
+        }
+
+        if (room.getAvailableBeds() > room.getTotalBeds()) {
+            throw new RuntimeException(
+                    "Available beds cannot be greater than total beds"
+            );
+        }
+
+        if (room.getMonthlyRent() <= 0) {
+            throw new RuntimeException("Monthly rent must be greater than zero");
+        }
     }
     @Override
     public Room addRoom(Room room){
+        validateRoom(room);
         return roomRepository.save(room);
     }
 
@@ -33,7 +60,10 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public Room updateRoom(Long id, Room room) {
+
         Room existingRoom = getRoomById(id);
+
+        validateRoom(room);
 
         existingRoom.setRoomNumber(room.getRoomNumber());
         existingRoom.setRoomType(room.getRoomType());

@@ -15,6 +15,7 @@ public class Room {
     private int availableBeds;
     private double monthlyRent;
 
+
     public Room(){
     }
 
@@ -62,5 +63,6 @@ public class Room {
     public void setMonthlyRent(double monthlyRent) {
         this.monthlyRent = monthlyRent;
     }
+
 }
 
