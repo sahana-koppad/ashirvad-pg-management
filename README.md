@@ -398,4 +398,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 [Repository](https://github.com/sahana-koppad/ashirvad-pg-management)
 
+[Linkedin](https://www.linkedin.com/in/sahana-koppad-a120923a8/)
+
 </div>
