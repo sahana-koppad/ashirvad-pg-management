@@ -1,222 +1,192 @@
-<div align="center">
+# Ashirvad PG Management System
 
-# 🏠 Ashirvad PG Management System
-
-**A full-stack, real-time management platform for paying guest (PG) accommodations.**
+A full-stack, real-time management platform for paying guest (PG) accommodations.
 
 Built to replace manual registers and scattered spreadsheets with a centralized dashboard for rooms, residents, payments, complaints, and notices.
 
-[![Java](https://img.shields.io/badge/Java-Backend-orange?logo=openjdk)](#technology-stack)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-REST%20API-6DB33F?logo=springboot)](#technology-stack)
-[![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)](#technology-stack)
-[![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql)](#technology-stack)
-[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-
-[Live Demo](#) · [Report Bug](https://github.com/sahana-koppad/ashirvad-pg-management/issues) · [Request Feature](https://github.com/sahana-koppad/ashirvad-pg-management/issues)
-
-</div>
+Repository: https://github.com/sahana-koppad/ashirvad-pg-management
 
 ---
 
-## 📌 Overview
+## Overview
 
-**Ashirvad PG Management System** is a full-stack web application built to digitize and streamline the day-to-day operations of a paying guest accommodation — from tracking room and bed occupancy to managing residents, rent payments, complaints, and notices, all from a single real-time dashboard.
+Ashirvad PG Management System is a full-stack web application built to digitize and streamline the day-to-day operations of a paying guest accommodation, from tracking room and bed occupancy to managing residents, rent payments, complaints, and notices, all from a single real-time dashboard.
 
-The project follows a clean **layered architecture** (Controller → Service → Repository) on the backend and a **component-driven** structure on the frontend, with a fully documented REST API connecting the two.
+The project follows a clean layered architecture (Controller, Service, Repository) on the backend and a component-driven structure on the frontend, with a fully documented REST API connecting the two.
 
-> Built to solve a real, everyday operational problem — not a tutorial clone — with an architecture designed to scale toward production features like role-based auth, payments, and reporting.
-
----
-
-## 🎯 The Problem
-
-Running a PG manually typically means:
-
-- ❌ No easy way to track which beds are vacant vs. occupied
-- ❌ Repeated, error-prone manual updates to registers
-- ❌ Resident complaints going unlogged or unresolved
-- ❌ Resident information scattered across notebooks/spreadsheets
-- ❌ No single view of occupancy, rent status, or notices
-
-**Ashirvad PG Management System solves this** with a centralized, real-time dashboard that brings rooms, residents, payments, complaints, and notices together in one place.
+The system was built to address a real, everyday operational problem, with an architecture designed to scale toward production features such as role-based authentication, online payments, and reporting.
 
 ---
 
-## ✨ Key Features
+## The Problem
 
-### 📊 Real-Time Dashboard
-At-a-glance visibility into PG operations:
-- Total rooms, residents & beds
-- Occupied vs. available beds
-- Live occupancy percentage
-- Total and open complaints
-- Active notices
+Running a PG manually typically involves:
 
-### 🛏️ Room Management
-Full CRUD for room inventory — room type, monthly rent, total beds, and live bed availability.
+- No easy way to track which beds are vacant versus occupied
+- Repeated, error-prone manual updates to registers
+- Resident complaints going unlogged or unresolved
+- Resident information scattered across notebooks and spreadsheets
+- No single view of occupancy, rent status, or notices
 
-### 👥 Resident Management
-Centralized resident records — contact details, assigned room, rent amount, and payment status.
+Ashirvad PG Management System solves this with a centralized, real-time dashboard that brings rooms, residents, payments, complaints, and notices together in one place.
 
-### 📢 Complaint Management
-End-to-end complaint lifecycle — registration, priority tagging, status tracking, resolution, and removal.
+---
 
-### 📋 Notice Management
+## Key Features
+
+**Real-Time Dashboard**
+At-a-glance visibility into PG operations, including total rooms, residents and beds, occupied versus available beds, live occupancy percentage, total and open complaints, and active notices.
+
+**Room Management**
+Full CRUD operations for room inventory, including room type, monthly rent, total beds, and live bed availability.
+
+**Resident Management**
+Centralized resident records, including contact details, assigned room, rent amount, and payment status.
+
+**Complaint Management**
+End-to-end complaint lifecycle, including registration, priority tagging, status tracking, resolution, and removal.
+
+**Notice Management**
 Quick, dated notices to keep all residents informed, with easy removal of outdated notices.
 
-### 🔐 Authentication
-Signup, login, logout, and protected routes on the frontend, architected to plug in **Spring Security + JWT** for production-grade auth.
+**Authentication**
+Signup, login, logout, and protected routes on the frontend, architected to plug in Spring Security and JWT for production-grade authentication.
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Layer | Technologies |
 |---|---|
-| **Backend** | Java, Spring Boot, Spring Web, Spring Data JPA, Bean Validation, Maven, Lombok |
-| **Database** | MySQL |
-| **Frontend** | React, Vite, JavaScript, React Router, Axios, Bootstrap, CSS animations |
-| **API** | RESTful architecture (JSON over HTTP) |
+| Backend | Java, Spring Boot, Spring Web, Spring Data JPA, Bean Validation, Maven, Lombok |
+| Database | MySQL |
+| Frontend | React, Vite, JavaScript, React Router, Axios, Bootstrap, CSS animations |
+| API | RESTful architecture (JSON over HTTP) |
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The backend follows a clean, layered architecture that separates concerns and keeps business logic decoupled from data access:
 
 ```
 React Frontend
-      │
-      │  REST API (Axios)
-      ▼
+      |
+      |  REST API (Axios)
+      v
   Controller Layer
-      │
+      |
   Service Layer
-      │
+      |
   Repository Layer
-      │
+      |
   MySQL Database
 ```
 
-- **Controller** — handles HTTP requests/responses and input validation
-- **Service** — encapsulates business logic
-- **Repository** — manages persistence via Spring Data JPA
-- **Frontend** — consumes REST endpoints and renders a responsive, real-time UI
+- Controller: handles HTTP requests and responses, and input validation
+- Service: encapsulates business logic
+- Repository: manages persistence via Spring Data JPA
+- Frontend: consumes REST endpoints and renders a responsive, real-time UI
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ashirvad-pg-management/
-│
-├── backend/
-│   ├── pom.xml
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/ashirvad/pg/
-│       │   │   ├── config/
-│       │   │   ├── controller/
-│       │   │   ├── entity/
-│       │   │   ├── repository/
-│       │   │   ├── service/
-│       │   │   └── exception/
-│       │   └── resources/
-│       │       └── application.properties
-│       └── test/
-│
-├── frontend/
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── public/
-│   └── src/
-│       ├── components/
-│       ├── pages/
-│       ├── services/
-│       ├── assets/
-│       ├── App.jsx
-│       ├── App.css
-│       ├── index.css
-│       └── main.jsx
-│
-├── README.md
-└── .gitignore
+|
+|-- backend/
+|   |-- pom.xml
+|   `-- src/
+|       |-- main/
+|       |   |-- java/com/ashirvad/pg/
+|       |   |   |-- config/
+|       |   |   |-- controller/
+|       |   |   |-- entity/
+|       |   |   |-- repository/
+|       |   |   |-- service/
+|       |   |   `-- exception/
+|       |   `-- resources/
+|       |       `-- application.properties
+|       `-- test/
+|
+|-- frontend/
+|   |-- package.json
+|   |-- vite.config.js
+|   |-- public/
+|   `-- src/
+|       |-- components/
+|       |-- pages/
+|       |-- services/
+|       |-- assets/
+|       |-- App.jsx
+|       |-- App.css
+|       |-- index.css
+|       `-- main.jsx
+|
+|-- README.md
+`-- .gitignore
 ```
 
 ---
 
-## 🔌 REST API Reference
+## REST API Reference
 
-<details>
-<summary><strong>Room Management</strong></summary>
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/api/rooms` | Get all rooms |
-| `GET` | `/api/rooms/{id}` | Get a room by ID |
-| `POST` | `/api/rooms` | Add a new room |
-| `PUT` | `/api/rooms/{id}` | Update room details |
-| `DELETE` | `/api/rooms/{id}` | Delete a room |
-
-</details>
-
-<details>
-<summary><strong>Resident Management</strong></summary>
+### Room Management
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/api/residents` | Get all residents |
-| `GET` | `/api/residents/{id}` | Get a resident by ID |
-| `POST` | `/api/residents` | Add a new resident |
-| `PUT` | `/api/residents/{id}` | Update resident details |
-| `DELETE` | `/api/residents/{id}` | Delete a resident |
+| GET | /api/rooms | Get all rooms |
+| GET | /api/rooms/{id} | Get a room by ID |
+| POST | /api/rooms | Add a new room |
+| PUT | /api/rooms/{id} | Update room details |
+| DELETE | /api/rooms/{id} | Delete a room |
 
-</details>
-
-<details>
-<summary><strong>Complaint Management</strong></summary>
+### Resident Management
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/api/complaints` | Get all complaints |
-| `GET` | `/api/complaints/{id}` | Get a complaint by ID |
-| `POST` | `/api/complaints` | Register a new complaint |
-| `PUT` | `/api/complaints/{id}` | Update complaint status |
-| `DELETE` | `/api/complaints/{id}` | Delete a complaint |
+| GET | /api/residents | Get all residents |
+| GET | /api/residents/{id} | Get a resident by ID |
+| POST | /api/residents | Add a new resident |
+| PUT | /api/residents/{id} | Update resident details |
+| DELETE | /api/residents/{id} | Delete a resident |
 
-</details>
-
-<details>
-<summary><strong>Notice Management</strong></summary>
+### Complaint Management
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/api/notices` | Get all notices |
-| `GET` | `/api/notices/{id}` | Get a notice by ID |
-| `POST` | `/api/notices` | Create a new notice |
-| `PUT` | `/api/notices/{id}` | Update a notice |
-| `DELETE` | `/api/notices/{id}` | Delete a notice |
+| GET | /api/complaints | Get all complaints |
+| GET | /api/complaints/{id} | Get a complaint by ID |
+| POST | /api/complaints | Register a new complaint |
+| PUT | /api/complaints/{id} | Update complaint status |
+| DELETE | /api/complaints/{id} | Delete a complaint |
 
-</details>
-
-<details>
-<summary><strong>Dashboard</strong></summary>
+### Notice Management
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/api/dashboard/summary` | Get real-time occupancy & summary stats |
+| GET | /api/notices | Get all notices |
+| GET | /api/notices/{id} | Get a notice by ID |
+| POST | /api/notices | Create a new notice |
+| PUT | /api/notices/{id} | Update a notice |
+| DELETE | /api/notices/{id} | Delete a notice |
 
-</details>
+### Dashboard
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | /api/dashboard/summary | Get real-time occupancy and summary statistics |
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Java 17+ and Maven
-- Node.js 18+ and npm
-- MySQL 8+
+- Java 17 or later, and Maven
+- Node.js 18 or later, and npm
+- MySQL 8 or later
 
 ### 1. Clone the repository
 
@@ -247,7 +217,7 @@ spring.jpa.properties.hibernate.format_sql=true
 server.port=8080
 ```
 
-> ⚠️ **Never commit real database credentials to GitHub.** Use environment variables or a `.env`/`application-local.properties` file excluded via `.gitignore`.
+Note: Never commit real database credentials to GitHub. Use environment variables or a separate local properties file excluded via `.gitignore`.
 
 ### 4. Run the backend
 
@@ -256,7 +226,7 @@ cd backend
 mvn spring-boot:run
 ```
 
-Backend runs at → `http://localhost:8080`
+The backend runs at http://localhost:8080
 
 ### 5. Run the frontend
 
@@ -266,75 +236,67 @@ npm install
 npm run dev
 ```
 
-Frontend runs at → `http://localhost:5173`
+The frontend runs at http://localhost:5173
 
 ---
 
-## ✅ Project Status
+## Project Status
 
 | Feature | Status |
 |---|---|
-| Real-time PG dashboard | ✅ Complete |
-| Room & bed tracking | ✅ Complete |
-| Resident management | ✅ Complete |
-| Payment status tracking | ✅ Complete |
-| Complaint management | ✅ Complete |
-| Notice management | ✅ Complete |
-| Occupancy calculation | ✅ Complete |
-| REST API integration | ✅ Complete |
-| MySQL integration | ✅ Complete |
-| Frontend authentication | ✅ Complete |
-| Validation & exception handling | ✅ Complete |
-| Responsive UI | ✅ Complete |
-| Spring Security + JWT | 🔜 Planned |
+| Real-time PG dashboard | Complete |
+| Room and bed tracking | Complete |
+| Resident management | Complete |
+| Payment status tracking | Complete |
+| Complaint management | Complete |
+| Notice management | Complete |
+| Occupancy calculation | Complete |
+| REST API integration | Complete |
+| MySQL integration | Complete |
+| Frontend authentication | Complete |
+| Validation and exception handling | Complete |
+| Responsive UI | Complete |
+| Spring Security and JWT | Planned |
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
-- [ ] Secure backend authentication with Spring Security + JWT
-- [ ] Role-based access (Admin / Staff)
-- [ ] Resident payment history & online rent payment
-- [ ] Automated room/bed allocation
-- [ ] Email & SMS notifications
-- [ ] Complaint image uploads
-- [ ] Search, filtering & pagination
-- [ ] Monthly income reports & analytics
-- [ ] Resident check-in / check-out workflow
-- [ ] Cloud deployment (AWS / Render / Railway)
+- Secure backend authentication with Spring Security and JWT
+- Role-based access (Admin and Staff)
+- Resident payment history and online rent payment
+- Automated room and bed allocation
+- Email and SMS notifications
+- Complaint image uploads
+- Search, filtering, and pagination
+- Monthly income reports and analytics
+- Resident check-in and check-out workflow
+- Cloud deployment
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome.
 
 1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a pull request
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 👩‍💻 Author
+## Author
 
-**Sahana Koppad**
+Sahana Koppad
 
-[![GitHub](https://img.shields.io/badge/GitHub-sahana--koppad-181717?logo=github)](https://github.com/sahana-koppad)
+GitHub: https://github.com/sahana-koppad
 
-**Repository:** [github.com/sahana-koppad/ashirvad-pg-management](https://github.com/sahana-koppad/ashirvad-pg-management)
-
----
-
-<div align="center">
-
-If this project helped you or you find it interesting, consider giving it a ⭐!
-
-</div>
+Repository: https://github.com/sahana-koppad/ashirvad-pg-management
