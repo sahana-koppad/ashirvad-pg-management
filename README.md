@@ -1,14 +1,30 @@
+<div align="center">
+
 # Ashirvad PG Management System
 
-A full-stack, real-time management platform for paying guest (PG) accommodations.
+**A full-stack, real-time management platform for paying guest (PG) accommodations**
 
 Built to replace manual registers and scattered spreadsheets with a centralized dashboard for rooms, residents, payments, complaints, and notices.
 
-Repository: https://github.com/sahana-koppad/ashirvad-pg-management
+<br>
+
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Backend-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+[View Repository](https://github.com/sahana-koppad/ashirvad-pg-management) &nbsp;|&nbsp; [Report an Issue](https://github.com/sahana-koppad/ashirvad-pg-management/issues)
+
+</div>
 
 ---
 
+<div align="center">
+
 ## Overview
+
+</div>
+
 
 Ashirvad PG Management System is a full-stack web application built to digitize and streamline the day-to-day operations of a paying guest accommodation, from tracking room and bed occupancy to managing residents, rent payments, complaints, and notices, all from a single real-time dashboard.
 
@@ -18,7 +34,12 @@ The system was built to address a real, everyday operational problem, with an ar
 
 ---
 
+<div align="center">
+
 ## The Problem
+
+</div>
+
 
 Running a PG manually typically involves:
 
@@ -32,7 +53,12 @@ Ashirvad PG Management System solves this with a centralized, real-time dashboar
 
 ---
 
+<div align="center">
+
 ## Key Features
+
+</div>
+
 
 **Real-Time Dashboard**
 At-a-glance visibility into PG operations, including total rooms, residents and beds, occupied versus available beds, live occupancy percentage, total and open complaints, and active notices.
@@ -54,7 +80,36 @@ Signup, login, logout, and protected routes on the frontend, architected to plug
 
 ---
 
+<div align="center">
+
 ## Technology Stack
+
+</div>
+
+
+<div align="center">
+
+**Backend**
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Web](https://img.shields.io/badge/Spring%20Web-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
+![Lombok](https://img.shields.io/badge/Lombok-A31E3F?style=flat-square)
+
+**Database**
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+
+**Frontend**
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white)
+
+</div>
 
 | Layer | Technologies |
 |---|---|
@@ -65,7 +120,12 @@ Signup, login, logout, and protected routes on the frontend, architected to plug
 
 ---
 
+<div align="center">
+
 ## System Architecture
+
+</div>
+
 
 The backend follows a clean, layered architecture that separates concerns and keeps business logic decoupled from data access:
 
@@ -90,7 +150,12 @@ React Frontend
 
 ---
 
+<div align="center">
+
 ## Project Structure
+
+</div>
+
 
 ```
 ashirvad-pg-management/
@@ -130,7 +195,12 @@ ashirvad-pg-management/
 
 ---
 
+<div align="center">
+
 ## REST API Reference
+
+</div>
+
 
 ### Room Management
 
@@ -180,7 +250,12 @@ ashirvad-pg-management/
 
 ---
 
+<div align="center">
+
 ## Getting Started
+
+</div>
+
 
 ### Prerequisites
 
@@ -240,27 +315,37 @@ The frontend runs at http://localhost:5173
 
 ---
 
+<div align="center">
+
 ## Project Status
+
+</div>
+
 
 | Feature | Status |
 |---|---|
-| Real-time PG dashboard | Complete |
-| Room and bed tracking | Complete |
-| Resident management | Complete |
-| Payment status tracking | Complete |
-| Complaint management | Complete |
-| Notice management | Complete |
-| Occupancy calculation | Complete |
-| REST API integration | Complete |
-| MySQL integration | Complete |
-| Frontend authentication | Complete |
-| Validation and exception handling | Complete |
-| Responsive UI | Complete |
-| Spring Security and JWT | Planned |
+| Real-time PG dashboard | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Room and bed tracking | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Resident management | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Payment status tracking | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Complaint management | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Notice management | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Occupancy calculation | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| REST API integration | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| MySQL integration | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Frontend authentication | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Validation and exception handling | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Responsive UI | ![Complete](https://img.shields.io/badge/Complete-2E7D32?style=flat-square) |
+| Spring Security and JWT | ![Planned](https://img.shields.io/badge/Planned-E65100?style=flat-square) |
 
 ---
 
+<div align="center">
+
 ## Roadmap
+
+</div>
+
 
 - Secure backend authentication with Spring Security and JWT
 - Role-based access (Admin and Staff)
@@ -275,7 +360,12 @@ The frontend runs at http://localhost:5173
 
 ---
 
+<div align="center">
+
 ## Contributing
+
+</div>
+
 
 Contributions, issues, and feature requests are welcome.
 
@@ -287,16 +377,25 @@ Contributions, issues, and feature requests are welcome.
 
 ---
 
+<div align="center">
+
 ## License
+
+</div>
+
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
+<div align="center">
+
 ## Author
 
-Sahana Koppad
+**Sahana Koppad**
 
-GitHub: https://github.com/sahana-koppad
+![GitHub](https://img.shields.io/badge/GitHub-sahana--koppad-181717?style=for-the-badge&logo=github&logoColor=white)
 
-Repository: https://github.com/sahana-koppad/ashirvad-pg-management
+[Repository](https://github.com/sahana-koppad/ashirvad-pg-management)
+
+</div>
