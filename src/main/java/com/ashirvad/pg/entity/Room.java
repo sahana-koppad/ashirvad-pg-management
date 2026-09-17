@@ -15,32 +15,23 @@ public class Room {
     private int availableBeds;
     private double monthlyRent;
 
-    public Room(Long id, String roomNumber, String roomType, int totalBeds, int availableBeds, double monthlyRent) {
-        this.id = id;
-        this.roomNumber = roomNumber;
-        this.roomType = roomType;
-        this.totalBeds = totalBeds;
-        this.availableBeds = availableBeds;
-        this.monthlyRent = monthlyRent;
+    public Room(){
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getRoomNumber() {
+
         return roomNumber;
     }
 
     public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
+        this.roomNumber = roomNumber;}
 
     public String getRoomType() {
+
         return roomType;
     }
 
